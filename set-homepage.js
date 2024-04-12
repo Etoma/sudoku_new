@@ -3,9 +3,9 @@ const path = require('path');
 
 const env = process.env.BUILD_ENV || 'development'; // Could be 'production', 'staging', etc.
 const homepage = {
-    'production': 'projects/sudoku_solver/',
+    'production': 'projects/sudoku-solver/',
     'development': '',
-    'staging': 'projects/sudoku_solver/'
+    'staging': 'projects/sudoku-solver/'
 }[env];
 
 const packageJsonPath = path.join(__dirname, 'package.json');
