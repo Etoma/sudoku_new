@@ -5,7 +5,7 @@ const env = process.env.BUILD_ENV || 'development'; // Could be 'production', 's
 console.log(env);
 const homepage = {
     'production': 'projects/sudoku-solver/',
-    'development': '',
+    'development': '.',
     'staging': 'projects/sudoku-solver/'
 }[env];
 
