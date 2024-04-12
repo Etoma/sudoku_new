@@ -34,7 +34,7 @@ function SudokuGrid() {
     async function fetchGrid() {
         setLoading(true);
         try {
-            const response = await fetch('/sudoku/generate.php');
+            const response = await fetch(`/${process.env.REACT_APP_API_BASE_URL}sudoku/generate.php`)
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -145,7 +145,7 @@ function SudokuGrid() {
     async function solveSudoku() {
         setLoading(true);
         try {
-            const response = await fetch('/sudoku/solve.php', {
+            const response = await fetch(`/${process.env.REACT_APP_API_BASE_URL}sudoku/solve.php`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
