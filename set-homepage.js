@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const env = process.env.BUILD_ENV || 'development'; // Could be 'production', 'staging', etc.
+console.log(env);
 const homepage = {
     'production': 'projects/sudoku-solver/',
     'development': '',
